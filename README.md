@@ -1,93 +1,72 @@
-# Behavior-Semantic Scenery Description
+# Behavior-Semantic Scenery Description (BSSD)
 
+Welcome to the documentation and overview repository for the Behavior-Semantic Scenery Description (BSSD). Here you will find all information about BSSD itself and an overview of the associated, available repositories.
 
+The BSSD framework provides a comprehensive method to link behavioral demands directly to elements of a traffic environment, supporting the development, safety validation and operation of Automated Vehicles (AVs). The framework focuses on the explicit representation of behavior-relevant information extracted from the static traffic environment - the scenery - which is usually represented in some kind of map. BSSD has a generic structure that fits every map format, ensuring broad applicability and ease of integration.
 
-## Getting started
+<img src="doc/images/overview.png" width ="100%"/>
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+<br>
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Currently supported map formats with BSSD extension:
+- [Lanelet2](https://github.com/fzi-forschungszentrum-informatik/Lanelet2)
+- [OpenDRIVE](https://www.asam.net/standards/detail/opendrive/)
 
-## Add your files
+Find example maps with BSSD extension [here](/maps/).
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## Documentation
 
+Are you new to BSSD or would you just like to know more about the theory behind it, the detailed specification for different map formats or further information? Here you can find the complete [BSSD documentation](/doc/overview.md).
+
+If you are already familiar with BSSD and want to get started right away, you can find code-specific documentation directly in the repositories linked below.
+
+## Overview of Repositories
+
+Here you can find all repositories to work with BSSD.
+
+### Working with BSSD based on Lanelet2 maps
+
+| **Name**                  | **Description**                                                                                                                                                                                                                                                                                                                                 | **Language**                                                                                                                                                                                                 | **Link**                                                                                                                                                                                                                 |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **BSSD Core**             | Low level Python library for handling BSSD data within Lanelet2 maps. If you work with Python, this is your go-to library.                                                                                                                                                                                                                       | <a>![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)</a>                                                                                                                                 | [![GitLab](https://img.shields.io/badge/GitLab-330F63?style=flat&logo=gitlab&logoColor=white)](https://gitlab.com/tuda-fzd/scenery-representations-and-maps/bssd-core) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/TUDa-FZD/BSSD-Core)  |
+| **Lanelet2 BSSD Converter** | Tool for the automated generation of the BSSD extension based on Lanelet2 maps. Use this tool for the initial generation of the BSSD extension for Lanelet2 maps.                                                                                                                                                                             | <a>![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)</a>                                                                                                                                 | [![GitLab](https://img.shields.io/badge/GitLab-330F63?style=flat&logo=gitlab&logoColor=white)](https://gitlab.com/tuda-fzd/scenery-representations-and-maps/lanelet2-bssd-converter) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/TUDa-FZD/Lanelet2-BSSD-Converter)  |
+| **OSM Map Merger**        | Tool for handling (negative) IDs and merging different OSM maps (e.g. Lanelet2 maps). Very helpful if you have modeled several maps separately and now want to merge them into a single map.                                                                                                                                                    | <a>![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)</a>                                                                                                                                 | [![GitLab](https://img.shields.io/badge/GitLab-330F63?style=flat&logo=gitlab&logoColor=white)](https://gitlab.com/tuda-fzd/scenery-representations-and-maps/osm-map-merger) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/TUDa-FZD/OSM-Map-Merger)  |
+| **CapBasedRouting**       | Capability-based route planner for the identification of routes that AVs with certain driving capabilities can handle based on the driving requirements of the given environment. Use this repository not only to determine drivable routes for your AV, but also to derive driving requirements from your ODD.                                  | <a>![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)</a>                                                                                                                        | [![GitLab](https://img.shields.io/badge/GitLab-330F63?style=flat&logo=gitlab&logoColor=white)](https://gitlab.com/tuda-fzd/scenery-representations-and-maps/capability-based-routing) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/TUDa-FZD/Capability-Based-Routing)  |
+
+### Working with BSSD based on OpenDRIVE maps
+
+| **Name**                  | **Description**                                                                                                                                                                                               | **Language**                                                                                                                                                                                        | **Link**                                                                                                                                                                                                                 |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **OpenDRIVE BSSD Converter** | Tool for the automated generation of the BSSD extension based on OpenDRIVE maps. Use this tool for the initial generation of the BSSD extension for OpenDRIVE maps.                                             | <a>![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)</a>                                                                                                                                 | [![GitLab](https://img.shields.io/badge/GitLab-330F63?style=flat&logo=gitlab&logoColor=white)](https://gitlab.com/tuda-fzd/scenery-representations-and-maps/opendrive-bssd-converter) [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/TUDa-FZD/OpenDRIVE-BSSD-Converter)  |
+
+## Credits
+
+M. Lippert, F. Glatzki, and H. Winner,
+[“Behavior-Semantic Scenery Description (BSSD) of Road Networks for Automated Driving”](https://ieeexplore.ieee.org/document/10474379),
+IEEE Access, Volume 12, 2024
+
+If you find our work useful in your research, please consider citing:
+
+```bibtex
+@ARTICLE{lippert2024,
+  author={Lippert, Moritz and Glatzki, Felix and Winner, Hermann},
+  journal={IEEE Access}, 
+  title={Behavior-Semantic Scenery Description (BSSD) of Road Networks for Automated Driving}, 
+  year={2024},
+  volume={12},
+  number={},
+  pages={43039-43052},
+  doi={10.1109/ACCESS.2024.3379007}
+}
 ```
-cd existing_repo
-git remote add origin https://git.rwth-aachen.de/fzd/unicar-agil/sonstiges/bssd/bssd-opensouce/behavior-semantic-scenery-description.git
-git branch -M main
-git push -uf origin main
-```
 
-## Integrate with your tools
+This work was supported in part by the [Federal Ministry of Education and Research of Germany (BMBF)](https://www.bmbf.de/bmbf/en/) through the Project [UNICAR*agil*](https://www.unicaragil.de/en/) under Grant FKZ 16EMO0286, and in part by [Continental](https://www.continental-automotive.com/en.html) through the Project [PRORETA 5](https://www.proreta.tu-darmstadt.de/proreta/index.en.jsp).
 
-- [ ] [Set up project integrations](https://git.rwth-aachen.de/fzd/unicar-agil/sonstiges/bssd/bssd-opensouce/behavior-semantic-scenery-description/-/settings/integrations)
+| BMBF                                                                                                | UNICAR*agil*                                                                                                       | Continental | PRORETA 5                                                                                                                                                                                 |
+|----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------| ---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <a href="https://www.bmbf.de/EN/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/BMBF_english.svg" alt="BMBF" width="100" /></a> | <a href="https://unicaragil.de/en/"><img src="https://www.unicaragil.de/images/logo-unicaragil-rgb.svg" alt="UNICAR*agil*" width="100" /></a> | <a href="https://www.continental-automotive.com/en.html"><img src="https://markenportal.continental.com/fileadmin/_processed_/7/c/csm_video_preview_09fadc3882.jpg" alt="Continental AG" width="100" /></a> | <a href="https://www.proreta.tu-darmstadt.de"><img src="https://www.proreta.tu-darmstadt.de/media/proreta/bilder_18/logos_12/proreta_logo.png" alt="PRORETA 5" width="100" /></a> |
 
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+We want to particularly thank:
+- **Eric Krämer** for his active support and contribution during the implementation of the BSSD extension for Lanelet2, BSSD Core, OSM Map Merger and CapBasedRouting
+- **Jannik Hildebrand** for his active support and contribution during the implementation of the Lanelet2 BSSD Converter
+- **Moritz Berghöfer** for his active support and contribution during the implementation of the BSSD extension for OpenDRIVE and OpenDRIVE BSSD Converter
