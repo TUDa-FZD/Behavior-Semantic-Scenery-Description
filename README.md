@@ -67,6 +67,6 @@ This work was supported in part by the [Federal Ministry of Education and Resear
 | <a href="https://www.bmbf.de/EN/"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/BMBF_english.svg" alt="BMBF" width="100" /></a> | <a href="https://unicaragil.de/en/"><img src="https://www.unicaragil.de/images/logo-unicaragil-rgb.svg" alt="UNICAR*agil*" width="100" /></a> | <a href="https://www.continental-automotive.com/en.html"><img src="https://markenportal.continental.com/fileadmin/_processed_/7/c/csm_video_preview_09fadc3882.jpg" alt="Continental AG" width="100" /></a> | <a href="https://www.proreta.tu-darmstadt.de"><img src="https://www.proreta.tu-darmstadt.de/media/proreta/bilder_18/logos_12/proreta_logo.png" alt="PRORETA 5" width="100" /></a> |
 
 We want to particularly thank:
-- **Eric Krämer** for his active support and contribution during the implementation of the BSSD extension for Lanelet2, BSSD Core, OSM Map Merger and CapBasedRouting
+- **[Eric Krämer](https://github.com/erickraemer)** for his active support and contribution during the implementation of the BSSD extension for Lanelet2, BSSD Core, OSM Map Merger and CapBasedRouting
 - **Jannik Hildebrand** for his active support and contribution during the implementation of the Lanelet2 BSSD Converter
 - **Moritz Berghöfer** for his active support and contribution during the implementation of the BSSD extension for OpenDRIVE and OpenDRIVE BSSD Converter
